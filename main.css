@@ -1,0 +1,537 @@
+/********************
+  GLOBAL VARIABLES
+********************/
+
+:root {
+  --c-primary: #808292;
+  --c-gray: #EEF0F6;
+  --c-white: #fff;
+  --c-blue: #0A5AFE;
+  --c-red: #AE2012;
+  --c-black: #292B2F;
+  --bg-primary: #F9FBFC;
+  --bg-gray: #EAECF1;
+  --bg-light-gray: #F5F7F9;
+}
+
+
+
+/********************
+  RESETS 
+********************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh; */
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class],
+li[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/********************
+  BASE 
+********************/
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+}
+
+svg {
+  display: block;
+}
+
+
+
+/********************
+  COMPONENTS 
+********************/
+
+.btn {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+
+/********************
+  LAYOUT
+********************/
+
+/*** GLOBAL ***/
+.container {
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
+/*** HEADER ***/
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  margin-top: 2.5rem;
+}
+
+.nav-item {
+  height: 100%;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.btn-hamburger {
+  font-family: none;
+  padding: .5rem;
+  background: var(--c-gray);
+  border-radius: 6px;
+  margin: 0;
+}
+
+.btn-hamburger svg {
+  fill: var(--c-primary);
+  transition: fill 300ms ease;
+}
+
+.btn-hamburger:hover svg {
+  fill: var(--c-black);
+}
+
+.nav-search {
+  height: 100%;
+}
+
+.search-input {
+  position: relative;
+  height: 100%;
+}
+
+.input-prompt {
+  height: 100%;
+  padding-left: 2.125rem;
+  color: var(--c-black);
+  font-size: .875rem;
+  border: none;
+  outline: none;
+  background: var(--bg-gray);
+}
+
+.input-prompt::placeholder {
+  color: var(--c-primary);
+  font-size: .875rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: .625rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-right-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn-chat {
+  height: 100%;
+}
+
+.btn-chat svg {
+  stroke: var(--c-primary);
+  transition: stroke 300ms ease;
+}
+
+.btn-chat:hover svg {
+  stroke: var(--c-black);
+}
+
+.btn-notification {
+  height: 100%;
+}
+
+.btn-notification svg {
+  fill: var(--c-primary);
+  transition: fill 300ms ease;
+}
+
+.btn-notification:hover svg {
+  fill: var(--c-black);
+}
+
+.btn-avatar {
+  display: inline-block;
+}
+
+/*** DROPDOWN ***/
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 100%;
+  background: var(--c-white);
+  border-radius: 0px 16px 16px 0px;
+  box-shadow: 4px 0px 8px rgba(183, 186, 198, 0.12);
+  padding: 2.5rem;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.75rem;
+}
+
+.logo-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  margin-right: .75rem;
+  background: var(--c-blue);
+}
+
+.logo-icon svg {
+  fill: var(--c-white);
+}
+
+.logo-text {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.dropdown-item {
+  padding-left: .375rem;
+}
+
+.dropdown-item:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.dropdown-link {
+  display: inline-grid;
+  grid-template-columns: 18px auto;
+  align-items: center;
+  column-gap: .75rem;
+}
+
+.dropdown-link:hover svg {
+  stroke: var(--c-blue);
+}
+
+.dropdown-icon {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-right: .75rem;
+}
+
+.dropdown-icon:hover ~ .dropdown-link-text {
+  color: var(--c-blue);
+}
+
+.dropdown-icon svg {
+  stroke: var(--c-primary);
+  transition: stroke 300ms ease;
+}
+
+.dropdown-icon:hover svg {
+  stroke: var(--c-blue);
+}
+
+.dropdown-link-text {
+  color: var(--c-primary);
+  transition: color 300ms ease;
+}
+
+.dropdown-link-text:hover {
+  color: var(--c-blue);
+}
+
+.dropdown-help {
+  padding: 1.75rem 1.25rem;
+  margin-bottom: 2.5rem;
+  background: var(--bg-light-gray);
+  border-radius: 8px;
+}
+
+.help-icon {
+  margin-bottom: 1.25rem;
+}
+
+.help-header {
+  margin-bottom: .75rem;
+  font-size: 16px;
+  color: var(--c-black);
+}
+
+.help-text {
+  margin-bottom: 1.25rem;
+  font-size: .75rem;
+  color: var(--c-primary);
+}
+
+.btn-contact {
+  width: 100%;
+  padding: .625rem 0;
+  background: var(--c-blue);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--c-white);
+  text-align: center;
+}
+
+.dropdown-logout {
+  padding-left: 6px;
+}
+
+.btn-logout {
+  display: inline-grid;
+  grid-template-columns: 18px auto;
+  align-items: center;
+  column-gap: .75rem;
+}
+
+.logout-icon svg {
+  stroke: var(--c-red);
+}
+
+.logout-text {
+  color: var(--c-red);
+  font-size: .875rem;
+}
+
+.dropdown-tooltip {
+  position: relative;
+  display: none;
+}
+
+.tooltip-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.tooltip-popup {
+  position: absolute;
+  left: -20px;
+  bottom: 24px;
+  width: 60px;
+}
+
+.dropdown-tooltip:hover .tooltip-popup {
+  height: 22px;
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  left: 0px;
+  bottom: 22px;
+  width: 240px;
+  padding: 20px;
+  border: 1px solid #EAEBED;
+  border-radius: 8px;
+  background: var(--c-white);
+  box-shadow: 4px 0px 8px rgba(183, 186, 198, 0.12);
+  opacity:0;
+  transition: opacity 250ms ease;
+}
+
+.tooltip-wrapper:before {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 20px;
+  border-left: 8.5px solid transparent;
+  border-right: 8.5px solid transparent;
+  border-top: 16px solid #EAEBED;
+}
+
+.tooltip-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -14px;
+  border-left: 8.5px solid transparent;
+  border-right: 8.5px solid transparent;
+  border-top: 16px solid var(--c-white);
+}
+
+.dropdown-tooltip:hover .tooltip-wrapper {
+  opacity: 1;
+  transition-delay: 10ms;
+}
+
+.tooltip-header {
+  margin-bottom: .5rem;
+  color: var(--c-black);
+  font-size: 1rem;
+}
+
+.tooltip-text {
+  margin-bottom: .75rem;
+  color: var(--c-primary);
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.btn-tooltip {
+  color: var(--c-blue);
+  font-size: .875rem;
+}
+
+
+
+/*** HERO ***/
+.hero {
+  width: 100%;
+  height: calc(100vh - 72px);
+}
+
+
+
+/********************
+  HELPERS 
+********************/
+
+.is-visible {
+  display: inline;
+}
+
+.fade-in {
+  animation: fade-in 300ms ease;
+}
+
+.fade-out {
+  animation: fade-out 300ms ease;
+}
+
+
+
+/********************
+  ANIMATIONS 
+********************/
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+/********************
+  MEDIUM SCREEN
+********************/
+
+@media screen and (max-width: 1366px) {
+  .dropdown-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-help {
+    display: none;
+  }
+
+  .dropdown-tooltip {
+    display: inline;
+  }
+}

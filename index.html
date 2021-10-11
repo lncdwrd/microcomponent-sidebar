@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Nav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="header-nav">
+        <div class="nav-left-menu">
+          <div class="nav-item">
+            <button class="btn btn-hamburger js-hamburger">
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1ZM0 7C0 6.44772 0.447715 6 1 6H15C15.5523 6 16 6.44772 16 7C16 7.55228 15.5523 8 15 8H1C0.447715 8 0 7.55228 0 7ZM0 13C0 12.4477 0.447715 12 1 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H1C0.447715 14 0 13.5523 0 13Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+
+        <div class="nav-search">
+          <div class="nav-item">
+            <div class="search-input">
+              <input type="text" class="input-prompt" placeholder="Search Anything...">
+              <svg class="input-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.95078 1.8792C3.7021 1.8792 1.8792 3.7021 1.8792 5.95078C1.8792 8.19945 3.7021 10.0224 5.95078 10.0224C8.19945 10.0224 10.0224 8.19945 10.0224 5.95078C10.0224 3.7021 8.19945 1.8792 5.95078 1.8792ZM0 5.95078C0 2.66425 2.66425 0 5.95078 0C9.2373 0 11.9016 2.66425 11.9016 5.95078C11.9016 7.27474 11.4692 8.49772 10.7379 9.48621C10.8327 9.53111 10.9216 9.59277 11 9.67118L13.7248 12.396C14.0917 12.7629 14.0917 13.3579 13.7248 13.7248C13.3579 14.0917 12.7629 14.0917 12.396 13.7248L9.67118 11C9.59277 10.9216 9.53111 10.8327 9.48621 10.7379C8.49772 11.4692 7.27474 11.9016 5.95078 11.9016C2.66425 11.9016 0 9.2373 0 5.95078Z" fill="#808292"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-right-menu">
+          <div class="nav-item">
+            <button class="btn btn-chat">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 11.6667C17 12.1382 16.8127 12.5903 16.4793 12.9237C16.1459 13.2571 15.6937 13.4444 15.2222 13.4444H4.55556L1 17V2.77778C1 2.30628 1.1873 1.8541 1.5207 1.5207C1.8541 1.1873 2.30628 1 2.77778 1H15.2222C15.6937 1 16.1459 1.1873 16.4793 1.5207C16.8127 1.8541 17 2.30628 17 2.77778V11.6667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="nav-item">
+            <button class="btn btn-notification">
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.517 1.879A6.3 6.3 0 0 1 9 0a6.3 6.3 0 0 1 4.483 1.879c1.186 1.201 1.851 2.828 1.851 4.522 0 3.005.635 4.864 1.214 5.939.291.54.573.892.767 1.099.097.104.172.172.217.209l.042.034a1 1 0 0 1-.572 1.82H1a1 1 0 0 1-.573-1.82l.042-.034c.044-.037.12-.105.217-.209.194-.207.476-.559.767-1.099.579-1.075 1.214-2.934 1.214-5.939 0-1.694.664-3.32 1.851-4.522zM3.095 13.502h11.81l-.119-.214c-.754-1.4-1.453-3.592-1.453-6.888 0-1.171-.46-2.292-1.274-3.116A4.3 4.3 0 0 0 9 2a4.3 4.3 0 0 0-3.06 1.285c-.814.824-1.274 1.945-1.274 3.116 0 3.296-.699 5.488-1.453 6.888l-.119.214zm3.87 3.733a1 1 0 0 1 1.365.371.79.79 0 0 0 .287.29.76.76 0 0 0 .767 0 .79.79 0 0 0 .287-.29 1 1 0 1 1 1.735.994 2.79 2.79 0 0 1-1.014 1.023 2.76 2.76 0 0 1-2.782 0A2.79 2.79 0 0 1 6.594 18.6a1 1 0 0 1 .371-1.365z"/>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="nav-item">
+            <button class="btn btn-avatar">
+              <img src="./assets/avatar.png" class="nav-avatar">
+            </button>
+          </div>
+        </div>
+      </nav>
+      
+
+      <nav class="dropdown">
+        <div class="dropdown-wrapper">
+          <div class="dropdown-menu">
+            <div class="dropdown-header">
+              <div class="logo-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M7.576 0a1.11 1.11 0 0 1 1.111 1.111v1.313h2.626V1.111a1.11 1.11 0 0 1 2.222 0v1.313h1.313a2.73 2.73 0 0 1 2.727 2.727v1.313h1.313a1.11 1.11 0 1 1 0 2.222h-1.313v1.818h1.313a1.11 1.11 0 1 1 0 2.222h-1.313v2.121a2.73 2.73 0 0 1-2.727 2.727h-1.313v1.313a1.11 1.11 0 1 1-2.222 0v-1.313H8.687v1.313a1.11 1.11 0 1 1-2.222 0v-1.313H5.152a2.73 2.73 0 0 1-2.727-2.727v-2.121H1.111a1.11 1.11 0 1 1 0-2.222h1.313V8.687H1.111a1.11 1.11 0 1 1 0-2.222h1.313V5.152a2.73 2.73 0 0 1 2.727-2.727h1.313V1.111A1.11 1.11 0 0 1 7.576 0zM5.152 4.646c-.279 0-.505.226-.505.505v9.697c0 .279.226.505.505.505h9.697c.279 0 .505-.226.505-.505V5.152c0-.279-.226-.505-.505-.505H5.152zm1.313 2.929a1.11 1.11 0 0 1 1.111-1.111h4.848a1.11 1.11 0 0 1 1.111 1.111v4.848a1.11 1.11 0 0 1-1.111 1.111H7.576a1.11 1.11 0 0 1-1.111-1.111V7.576zm2.222 1.111v2.626h2.626V8.687H8.687z"/>
+                </svg>
+              </div>
+    
+              <p class="logo-text">Neugen</p>
+            </div>
+
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="" class="dropdown-link">
+                  <span class="dropdown-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="none">
+                      <path d="M6 19v-9h6v9M1 7.3L9 1l8 6.3v9.9a1.81 1.81 0 0 1-.521 1.273c-.333.338-.786.527-1.257.527H2.778c-.471 0-.924-.19-1.257-.527A1.81 1.81 0 0 1 1 17.2V7.3z" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="dropdown-link-text">Dashboard</span>
+                </a>
+              </li>
+  
+              <li class="dropdown-item">
+                <a href="" class="dropdown-link">
+                  <span class="dropdown-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
+                      <path d="M17 8h-3.2l-2.4 7L6.6 1 4.2 8H1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="dropdown-link-text">Activity</span>
+                </a>
+              </li>
+  
+              <li class="dropdown-item">
+                <a href="" class="dropdown-link">
+                  <span class="dropdown-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" fill="none">
+                      <path d="M13 17V7M7 17V1M1 17V11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="dropdown-link-text">Statistic</span>
+                </a>
+              </li>
+  
+              <li class="dropdown-item">
+                <a href="" class="dropdown-link">
+                  <span class="dropdown-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" fill="none">
+                      <path d="M12.636 14v-1.444a2.88 2.88 0 0 0-.852-2.043 2.92 2.92 0 0 0-2.057-.846H3.909a2.92 2.92 0 0 0-2.057.846A2.88 2.88 0 0 0 1 12.556V14m16 0v-1.444c0-.64-.215-1.262-.61-1.768a2.91 2.91 0 0 0-1.572-1.027m-2.909-8.667a2.91 2.91 0 0 1 1.576 1.027c.396.507.611 1.13.611 1.771s-.215 1.265-.611 1.771a2.91 2.91 0 0 1-1.576 1.027M9.727 3.889a2.9 2.9 0 0 1-2.909 2.889 2.9 2.9 0 0 1-2.909-2.889A2.9 2.9 0 0 1 6.818 1a2.9 2.9 0 0 1 2.909 2.889z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="dropdown-link-text">Team</span>
+                </a>
+              </li>
+  
+              <li class="dropdown-item">
+                <a href="" class="dropdown-link">
+                  <span class="dropdown-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke-width="1.6" stroke-linejoin="round">
+                      <path d="M9 11.182a2.18 2.18 0 1 0 0-4.364 2.18 2.18 0 1 0 0 4.364z"/>
+                      <path d="M14.382 11.182a1.2 1.2 0 0 0 .24 1.324l.044.044c.135.135.242.296.316.472s.111.366.111.557-.038.38-.111.557-.18.337-.316.472-.296.242-.472.316-.366.111-.557.111-.38-.038-.557-.111-.337-.181-.472-.316l-.044-.044a1.2 1.2 0 0 0-1.324-.24 1.2 1.2 0 0 0-.727 1.098v.124c0 .386-.153.756-.426 1.029S9.444 17 9.058 17s-.756-.153-1.029-.426-.426-.643-.426-1.029v-.066a1.2 1.2 0 0 0-.785-1.098 1.2 1.2 0 0 0-1.324.24l-.044.044c-.135.135-.296.242-.472.316s-.366.111-.557.111-.38-.038-.557-.111-.337-.18-.472-.316-.243-.296-.316-.472-.111-.366-.111-.557.038-.38.111-.557.18-.337.316-.472l.044-.044a1.2 1.2 0 0 0 .24-1.324 1.2 1.2 0 0 0-1.098-.727h-.124c-.386 0-.756-.153-1.029-.426S1 9.444 1 9.058s.153-.756.426-1.029.643-.426 1.029-.426h.065a1.2 1.2 0 0 0 1.098-.785 1.2 1.2 0 0 0-.24-1.324l-.044-.044c-.135-.135-.243-.296-.316-.472s-.111-.366-.111-.557.038-.38.111-.557.18-.337.316-.472.296-.243.472-.316.366-.111.557-.111.38.038.557.111.337.18.472.316l.044.044a1.2 1.2 0 0 0 1.324.24h.058a1.2 1.2 0 0 0 .727-1.098v-.124c0-.386.153-.756.426-1.029S8.614 1 9 1s.756.153 1.028.426.426.643.426 1.029v.065a1.2 1.2 0 0 0 .727 1.098 1.2 1.2 0 0 0 1.324-.24l.044-.044c.135-.135.296-.243.472-.316s.366-.111.557-.111.38.038.557.111.337.18.472.316.242.296.316.472.111.366.111.557-.038.38-.111.557-.181.337-.316.472l-.044.044a1.2 1.2 0 0 0-.24 1.324v.058a1.2 1.2 0 0 0 1.098.727h.124c.386 0 .756.153 1.029.426S17 8.614 17 9s-.153.756-.426 1.028-.643.426-1.029.426h-.066a1.2 1.2 0 0 0-1.098.727z"/>
+                    </svg>
+                  </span>
+                  <span class="dropdown-link-text">Settings</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="dropdown-footer">
+            <div class="dropdown-help">
+              <div class="help-icon">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.92999 3.92993L8.16999 8.16993M13.83 13.8301L18.07 18.0701M13.83 8.17001L17.36 4.64001M3.92999 18.0701L8.16999 13.8301M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11ZM15 11C15 13.2091 13.2091 15 11 15C8.79086 15 7 13.2091 7 11C7 8.79086 8.79086 7 11 7C13.2091 7 15 8.79086 15 11Z" stroke="#4065FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="help-header">Having problems?</p>
+              <p class="help-text">Morbi vel mi in elit maximus dignissim non et nibh</p>
+              <a href="" class="btn btn-contact">Contact Support</a>
+            </div>
+  
+            <div class="dropdown-logout">
+              <button class="btn btn-logout">
+                <span class="logout-icon">
+                  <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.6989 12.1667L17 8M17 8L12.6989 3.83334M17 8L6.67742 8M6.16129 16H2.72043C2.26414 16 1.82655 15.8244 1.5039 15.5118C1.18126 15.1993 1 14.7754 1 14.3333V2.66667C1 2.22464 1.18126 1.80072 1.5039 1.48816C1.82655 1.17559 2.26414 1 2.72043 1H6.16129" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="logout-text">Logout</span>
+              </button>
+            </div>
+
+            <div class="dropdown-tooltip">
+              <div class="tooltip-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.672 6.60002C6.86008 6.06535 7.23132 5.6145 7.71996 5.32732C8.20861 5.04014 8.78312 4.93517 9.34174 5.03099C9.90037 5.1268 10.4071 5.41724 10.7721 5.85084C11.1371 6.28444 11.3368 6.83323 11.336 7.40002C11.336 9.00002 8.936 9.80002 8.936 9.80002M9 13H9.008M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="#808292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <div class="tooltip-popup">
+                <div class="tooltip-wrapper">
+                  <p class="tooltip-header">Having problems?</p>
+                  <p class="tooltip-text">Morbi vel mi in elit maximus dignissim non et nibh</p>
+                  <a href="" class="btn btn-tooltip">Contact Support</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+
+  <section class="hero"></section>
+  <script src="./app.js"></script>
+</body>
+</html>
