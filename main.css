@@ -420,6 +420,7 @@ svg {
   position: absolute;
   left: 0px;
   bottom: 22px;
+  display: none;
   width: 240px;
   padding: 20px;
   border: 1px solid #EAEBED;
@@ -451,6 +452,7 @@ svg {
 }
 
 .dropdown-tooltip:hover .tooltip-wrapper {
+  display: inline;
   opacity: 1;
   transition-delay: 10ms;
 }
